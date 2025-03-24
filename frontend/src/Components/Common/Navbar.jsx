@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   HiOutlineUser,
@@ -9,6 +9,10 @@ import SearchBar from "./SearchBar";
 import CartDrawer from "../Layout/CartDrawer";
 
 export default function Navbar() {
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleCartDrawer = () => {
+      setDrawerOpen(!drawerOpen);
+    };
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
@@ -47,7 +51,7 @@ export default function Navbar() {
           <Link to="/profile" className="hover:text-black">
             <HiOutlineUser className="h-6 w-6 text-gray-700" />
           </Link>
-          <button className="relative hover:text-black">
+          <button onClick={toggleCartDrawer} className="relative hover:text-black">
             <HiOutlineShoppingBag className="h-6 w-6 text-gray-700" />
             <span className="absolute -top-1 bg-norooz-red text-white text-xs rounded-full px-2 py-0.5 ">
               4
@@ -62,7 +66,7 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
-      <CartDrawer/>
+      <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer}/>
     </>
   );
 }
