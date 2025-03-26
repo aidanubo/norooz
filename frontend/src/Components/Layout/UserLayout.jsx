@@ -6,6 +6,7 @@ export default function UserLayout() {
   return (
     <>
      <Header/> 
+     
      <Footer/>
     </>
   )
