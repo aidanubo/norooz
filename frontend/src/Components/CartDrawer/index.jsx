@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import CartContents from "../Cart/CartContents";
+import CartContents from "./CartContents";
 
 export default function CartDrawer({drawerOpen, toggleCartDrawer}) {
 

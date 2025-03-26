@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Common/Header'
-import Footer from '../Common/Footer'
+import Header from './Header'
+import Footer from './Footer'
 
 export default function UserLayout() {
   return (

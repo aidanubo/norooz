@@ -1,5 +1,5 @@
 import React from 'react'
-import Topbar from '../Layout/Topbar'
+import Topbar from './TopBar'
 import Navbar from './Navbar'
 
 export default function Header() {
