@@ -1,14 +1,20 @@
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import UserLayout from "./Components/Layout/UserLayout";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Home from "./Pages/index";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<UserLayout />} />
-        <Route />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Header />
+      <main className="min-h-[80vh]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 }
