@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function GenderCollectionSection() {
   return (
-    <section className='py-16 it px-4 lg:px-0'>
+    <section className=' py-16 it px-4 lg:px-0'>
       <div className='container mx-auto flex flex-col md:flex-row gap-8'>
         <div className='relative flex-1'>
           <img src={womensCollectionSection} alt="Women" className='w-[700px] h-[600px] object-cover '/>
