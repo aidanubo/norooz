@@ -3,6 +3,7 @@ import GenderCollectionSection from "./GenderCollectionSection";
 import NewArrivals from "./NewArrivals";
 import ProductDetails from "./ProductDetails";
 import ProductGrid from "./ProductGrid";
+import FeaturedCollection from "./FeaturedCollection";
 
 const placeholderProducts =[
   {
@@ -68,6 +69,7 @@ export default function Products() {
         </h2>
         <ProductGrid products={placeholderProducts} />
       </div>
+      <FeaturedCollection />
     </>
   );
 }
