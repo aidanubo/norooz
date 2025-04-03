@@ -6,6 +6,8 @@ import Footer from "./Components/Footer";
 import {Toaster} from 'sonner';
 import ProductDetails from "./Components/Products/ProductDetails";
 import Checkout from "./Components/CartDrawer/Checkout";
+import OrderDetailsPage from "./Pages/OrderDetailsPage";
+import MyOrder from "./Pages/Profile/MyOrder";
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetails />}/>
           <Route path="/checkout" element={<Checkout />}/>
           <Route path="/order-confirmation" element={<OrderConfirmationPage />}/>
+          <Route path="/order/:id" element={<OrderDetailsPage />}/>
+          <Route path="/my-orders" element={<MyOrder />}/>
         </Routes>
       </main>
       <Footer />
