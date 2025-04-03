@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaFilter } from "react-icons/fa";
 import FilterSidebar from "../../Components/Products/FilterSidebar";
-import SortOptions from "../../Components/Products/SortOptions";
+import SortOptions from "../../Components/Products/SortOption";
 import ProductGrid from "../../Components/Products/ProductGrid";
 
 export default function CollectionPage() {
@@ -13,7 +13,7 @@ export default function CollectionPage() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleClickOutside = () => {
+  const handleClickOutside = (e) => {
     if (sideBarRef.current && !sideBarRef.current.contains(e.target)) {
       setIsSidebarOpen(false);
     }
@@ -21,8 +21,10 @@ export default function CollectionPage() {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [ ]);
 
   useEffect(() => {
     setTimeout(() => {

@@ -4,6 +4,7 @@ import { CollectionPage, Home, Login, Profile, Register,  } from "./Pages";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import {Toaster} from 'sonner';
+import ProductDetails from "./Components/Products/ProductDetails";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/register" element={<Register />}/>
           <Route path="/profile" element={<Profile />}/>
           <Route path="/collections/:collection" element={<CollectionPage />}/>
+          <Route path="/product/:id" element={<ProductDetails />}/>
         </Routes>
       </main>
       <Footer />
