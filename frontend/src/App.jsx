@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import {
+  AdminHomePage,
   CollectionPage,
   Home,
   Login,
@@ -23,10 +24,11 @@ export default function App() {
       <Toaster position="top-right" />
 
       <Routes>
-        <Route path="/admin" element={<Admin />} />
-
-        <Route 
-          path="/*" 
+        <Route path="/admin" element={<Admin />}>
+          <Route index element={<AdminHomePage />} />
+        </Route>
+        <Route
+          path="/*"
           element={
             <>
               <Header />
@@ -36,17 +38,23 @@ export default function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route path="/collections/:collection" element={<CollectionPage />} />
+                  <Route
+                    path="/collections/:collection"
+                    element={<CollectionPage />}
+                  />
                   <Route path="/product/:id" element={<ProductDetails />} />
                   <Route path="/checkout" element={<Checkout />} />
-                  <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
+                  <Route
+                    path="/order-confirmation"
+                    element={<OrderConfirmationPage />}
+                  />
                   <Route path="/order/:id" element={<OrderDetailsPage />} />
                   <Route path="/my-orders" element={<MyOrder />} />
                 </Routes>
               </main>
               <Footer />
             </>
-          } 
+          }
         />
       </Routes>
     </>

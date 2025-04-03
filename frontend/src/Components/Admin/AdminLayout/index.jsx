@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { Outlet } from "react-router-dom";
+import AdminSidebar from "./AdminSidebar";
 
 export default function AdminLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -22,6 +24,19 @@ export default function AdminLayout() {
           onClick={toggleSidebar}
         ></div>
       )}
+
+      <div
+        className={`bg-gray-900 w-64 min-h-screen text-white absolute md:relative transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 md:translate-x-0 md:static md:block z-20`}
+      >
+        <AdminSidebar />
+      </div>
+
+      <div className="flex-grow p-6 overflow-auto">
+        <Outlet />
+      </div>
+
     </div>
   );
 }
