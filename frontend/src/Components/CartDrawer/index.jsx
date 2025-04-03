@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function CartDrawer({ drawerOpen, toggleCartDrawer }) {
   const handleCheckout = () => {
+    toggleCartDrawer();
     navigate("/checkout");
-  }
+  };
   const navigate = useNavigate();
-
 
   return (
     <div
