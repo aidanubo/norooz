@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import {Toaster} from 'sonner';
 import ProductDetails from "./Components/Products/ProductDetails";
+import Checkout from "./Components/CartDrawer/Checkout";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/profile" element={<Profile />}/>
           <Route path="/collections/:collection" element={<CollectionPage />}/>
           <Route path="/product/:id" element={<ProductDetails />}/>
+          <Route path="/checkout" element={<Checkout />}/>
         </Routes>
       </main>
       <Footer />
