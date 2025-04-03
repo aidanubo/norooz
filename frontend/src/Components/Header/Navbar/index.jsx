@@ -36,25 +36,27 @@ export default function Navbar() {
             Men
           </Link>
           <Link
-            to="#"
+            to="collections/all"
             className="text-gray-700 hover:text-black text-sm  font-medium uppercase"
           >
             Women
           </Link>
           <Link
-            to="#"
+            to="collections/all"
             className="text-gray-700 hover:text-black text-sm  font-medium uppercase"
           >
             Top wear
           </Link>
           <Link
-            to="#"
+            to="collections/all"
             className="text-gray-700 hover:text-black text-sm  font-medium uppercase"
           >
             Bottom wear
           </Link>
         </div>
+
         <div className="flex items-center space-x-4">
+          <Link to="/admin" className="block bg-black px-2 rounded text-sm text-white">Admin</Link>
           <Link to="/profile" className="hover:text-black">
             <HiOutlineUser className="h-6 w-6 text-gray-700" />
           </Link>
