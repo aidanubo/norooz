@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { CollectionPage, Home, Login, Profile, Register,  } from "./Pages";
+import { CollectionPage, Home, Login, OrderConfirmationPage, Profile, Register,  } from "./Pages";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import {Toaster} from 'sonner';
@@ -21,6 +21,7 @@ export default function App() {
           <Route path="/collections/:collection" element={<CollectionPage />}/>
           <Route path="/product/:id" element={<ProductDetails />}/>
           <Route path="/checkout" element={<Checkout />}/>
+          <Route path="/order-confirmation" element={<OrderConfirmationPage />}/>
         </Routes>
       </main>
       <Footer />
