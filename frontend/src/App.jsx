@@ -19,6 +19,8 @@ import MyOrder from "./Pages/Profile/MyOrder";
 import Admin from "./Components/Admin";
 import UserManagement from "./Components/Admin/UserManagement";
 import ProductManagement from "./Components/Admin/ProductManagement";
+import EditProductPage from "./Components/Admin/EditProductPage";
+import OrderManagement from "./Components/Admin/OrderManagement";
 
 export default function App() {
   return (
@@ -30,6 +32,8 @@ export default function App() {
           <Route index element={<AdminHomePage />} />
           <Route path="users" element={<UserManagement />} />
           <Route path="products" element={<ProductManagement />} />
+          <Route path="products/:id/edit" element={<EditProductPage />} />
+          <Route path="orders" element={<OrderManagement />} />
         </Route>
         <Route
           path="/*"
