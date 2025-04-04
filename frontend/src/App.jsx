@@ -17,6 +17,8 @@ import Checkout from "./Components/CartDrawer/Checkout";
 import OrderDetailsPage from "./Pages/OrderDetailsPage";
 import MyOrder from "./Pages/Profile/MyOrder";
 import Admin from "./Components/Admin";
+import UserManagement from "./Components/Admin/UserManagement";
+import ProductManagement from "./Components/Admin/ProductManagement";
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
       <Routes>
         <Route path="/admin" element={<Admin />}>
           <Route index element={<AdminHomePage />} />
+          <Route path="users" element={<UserManagement />} />
+          <Route path="products" element={<ProductManagement />} />
         </Route>
         <Route
           path="/*"
